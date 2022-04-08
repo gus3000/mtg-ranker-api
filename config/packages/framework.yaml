@@ -17,6 +17,13 @@ framework:
     php_errors:
         log: true
 
+    http_client:
+        scoped_clients:
+            scryfall.client:
+                base_uri: 'https://api.scryfall.com'
+                scope: ' https://api\.scryfall\.com'
+
+
 when@test:
     framework:
         test: true

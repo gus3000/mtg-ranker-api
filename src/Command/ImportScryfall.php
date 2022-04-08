@@ -27,7 +27,6 @@ class ImportScryfall extends Command
     )
     {
         parent::__construct();
-        $this->filesystem = new Filesystem();
     }
 
 
@@ -39,6 +38,7 @@ class ImportScryfall extends Command
 
     protected function initialize(InputInterface $input, OutputInterface $output)
     {
+        $this->filesystem = new Filesystem();
         $this->style = new SymfonyStyle($input, $output);
     }
 
